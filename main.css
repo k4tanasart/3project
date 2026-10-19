@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body {
+    font-family: "figtree", sans-serif;
+    font-weight: 400;
+    color: azure;
+    font-size: 16px;
+    background: #000;
+}
