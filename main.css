@@ -15,5 +15,10 @@ body {
     font-weight: 400;
     color: azure;
     font-size: 16px;
-    background: #000;
+    background: white
+}
+
+header{
+    width: 80%;
+    align-items: center;
 }
