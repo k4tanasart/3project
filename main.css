@@ -18,7 +18,7 @@ body {
     background: white
 }
 
-header{
-    width: 80%;
-    align-items: center;
+.header-offerpath{
+    margin: 0% auto;
+    width: 30%;
 }
