@@ -13,12 +13,12 @@ img {
 body {
     font-family: "figtree", sans-serif;
     font-weight: 400;
-    color: azure;
+    color: black;
     font-size: 16px;
     background: white
 }
 
 .header-offerpath{
-    margin: 0% auto;
-    width: 30%;
+    margin: 0 auto;
+    width: 50%;
 }
