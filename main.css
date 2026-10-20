@@ -18,7 +18,16 @@ body {
     background: white
 }
 
+header{
+    background-color: #17316C0F;
+}
+
 .header-offerpath{
     margin: 0 auto;
-    width: 50%;
+    width: 80%;
+    padding-top: 15px;
+}
+
+.header-offerpath h2{
+    padding-top: 15px;
 }
