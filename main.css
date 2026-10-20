@@ -33,11 +33,8 @@ header{
 }
 
 .productcheckout{
-    justify-content: space-between;
-    justify-self: center;
-    gap: 100px;
-}
-
-.produt--summary{
+    justify-content: flex-start;
+    width: 100%;
     display: flex;
+    gap: 10%;
 }
