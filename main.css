@@ -36,7 +36,7 @@ header{
     justify-content: flex-start;
     width: 100%;
     display: flex;
-    gap: 10%;
+    gap: 15%;
     padding-top: 40px;
 }
 
@@ -54,7 +54,6 @@ header{
 .productcheckout__info{
     display: grid;
     grid-template-columns: 1fr auto;
-    column-gap: 100px;
     row-gap: 10px;
     width: 100%;
 }
@@ -124,3 +123,4 @@ header{
 .emailinput{
     width: 100%;
 }
+
