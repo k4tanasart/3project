@@ -124,3 +124,13 @@ header{
     width: 100%;
 }
 
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.summary-row .value {
+    text-align: right;
+}
