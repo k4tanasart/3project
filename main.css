@@ -162,3 +162,21 @@ header{
     height: 25px;
     color: aliceblue;
 }
+
+@media(max-width: 768px){
+    .productcheckout{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .productcheckout__product--card{
+        width: 80%;
+        padding: 0;
+        margin: 0 auto;
+
+    }
+    .productcheckout__produt--summary{
+        width: 83%;
+        margin: 0 auto;
+    }
+}
