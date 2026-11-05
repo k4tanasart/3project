@@ -1,19 +1,21 @@
-const QuantityEl = document.querySelector(".productcheckout__quantity--number")
-const QuantityPlus = document.querySelector(".plus--quantity")
-const QuantityMinus = document.querySelector(".minus--quantity")
-const ProductsEl = document.querySelector(".Products--value")
-const ProductSinglePrice = Number(document.querySelector(".productcheckout__single--price").textContent)
-const SubtotalEl = document.querySelector(".Subtotal--value")
-const VatEl = document.querySelector(".VAT--value")
-const TotalEl = document.querySelector(".Total--value")
+const QuantityEl = document.querySelector(".productcheckout__quantity--number");
+const QuantityPlus = document.querySelector(".plus--quantity");
+const QuantityMinus = document.querySelector(".minus--quantity");
+const ProductsEl = document.querySelector(".Products--value");
+const ProductSinglePrice = Number(document.querySelector(".productcheckout__single--price").textContent);
+const SubtotalEl = document.querySelector(".Subtotal--value");
+const VatEl = document.querySelector(".VAT--value");
+const TotalEl = document.querySelector(".Total--value");
+const deleteIcon = document.querySelector(".productcheckout__delete-icon");
+const wholeProductCard = document.querySelector(".productcheckout__pic--info");
 
 
 let ProductsPrice = Number(ProductsEl.textContent);
 
-let ProductQuantity = Number(QuantityEl.textContent);
+let ProductQuantity = Number(QuantityEl.value);
 
 function setprices() {
-    QuantityEl.textContent = ProductQuantity;
+    QuantityEl.value = ProductQuantity;
     ProductsEl.textContent = ((ProductQuantity * ProductSinglePrice).toFixed(2));
     SubtotalEl.textContent = (Number(ProductsEl.textContent) + 
     Number(document.querySelector(".Finishing--value").textContent) +
@@ -23,7 +25,12 @@ function setprices() {
 
 }
 setprices()
+    
 
+QuantityEl.addEventListener("input", ()=>{
+    ProductQuantity = Number(QuantityEl.value)
+    setprices()
+})
 
 QuantityPlus.addEventListener("click", function() {
     ProductQuantity += 1;
@@ -32,6 +39,15 @@ QuantityPlus.addEventListener("click", function() {
 
 QuantityMinus.addEventListener("click", function(){
     ProductQuantity -= 1;
+    if(ProductQuantity < 0 )
+        ProductQuantity = 0;
     setprices()
 } )
 
+if (deleteIcon){
+    deleteIcon.addEventListener("click", ()=>{
+        wholeProductCard.outerHTML = "";
+        ProductQuantity = 0;
+        setprices()
+    })
+}
