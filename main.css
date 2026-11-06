@@ -179,6 +179,27 @@ header{
     color: aliceblue;
 }
 
+.logo__image{
+    max-width: 170px;
+
+}
+.page-header{
+    padding: 30px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media(max-width: 768px){
     .productcheckout{
         display: flex;
