@@ -8,6 +8,8 @@ const VatEl = document.querySelector(".VAT--value");
 const TotalEl = document.querySelector(".Total--value");
 const deleteIcon = document.querySelector(".productcheckout__delete-icon");
 const wholeProductCard = document.querySelector(".productcheckout__pic--info");
+const productDeliveryValue = document.querySelector(".Delivery--value").textContent;
+const productFinishingValue = document.querySelector(".Finishing--value").textContent;
 
 
 let ProductsPrice = Number(ProductsEl.textContent);
@@ -16,13 +18,18 @@ let ProductQuantity = Number(QuantityEl.value);
 
 function setprices() {
     QuantityEl.value = ProductQuantity;
-    ProductsEl.textContent = ((ProductQuantity * ProductSinglePrice).toFixed(2));
-    SubtotalEl.textContent = (Number(ProductsEl.textContent) + 
-    Number(document.querySelector(".Finishing--value").textContent) +
-    Number(document.querySelector(".Delivery--value").textContent)).toFixed(2);
-    VatEl.textContent = (Number(SubtotalEl.textContent) * 0.19).toFixed(2);
-    TotalEl.textContent = (Number(SubtotalEl.textContent) + Number(VatEl.textContent)).toFixed(2);
-
+    let productsElementSum = ((ProductQuantity * ProductSinglePrice).toFixed(2));
+    ProductsEl.textContent = productsElementSum + "€";
+    let subtotalElementSum = (Number(productsElementSum) + 
+    Number(productFinishingValue) +
+    Number(productDeliveryValue)).toFixed(2);
+    SubtotalEl.textContent = subtotalElementSum + "€";
+    let vatElementSum = (Number(subtotalElementSum) * 0.19).toFixed(2);
+    VatEl.textContent = vatElementSum + "€";
+    TotalEl.textContent = (Number(subtotalElementSum) + Number(vatElementSum)).toFixed(2) + "€";
+    document.querySelector(".productcheckout__single--price").textContent = ProductSinglePrice + "€";
+    document.querySelector(".Delivery--value").textContent = productDeliveryValue + "€"
+    document.querySelector(".Finishing--value").textContent = productFinishingValue + "€"
 }
 setprices()
     
