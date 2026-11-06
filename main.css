@@ -4,6 +4,9 @@
     margin: 0;
     padding: 0;
 }
+a{
+    text-decoration: none;
+}
 
 img {
     max-width: 100%;
@@ -19,8 +22,9 @@ body {
 }
 
 header{
-    background-color: #17316C0F;
+    background-color: white;
 }
+
 
 .header-offerpath{
     margin: 0 auto;
@@ -184,10 +188,42 @@ header{
 
 }
 .page-header{
+    display: flex;
     padding: 30px 0;
+    justify-content: space-between;
+    flex-direction: row;
+    justify-self: center;
+    width: 80%;
+    background-color: white;
+}
+
+.page-header__navigation-tabs-list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;  
+    height: 23px;
+    align-self: center;
 }
 
 
+
+.page-header__navigation-tabs-item, .page-header__navigation-tabs, .page-header__search-tab{
+    align-content: center   ;
+    align-self: center;
+}
+
+.page-header__search-tab{
+    height: 40px;
+    border-radius: 10px ;
+    background-color: #17316C0F;
+    border: none;
+    width: 25%;
+    background-image:url(/img/zalupa.png) ;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 30px;
+}
 
 
 
