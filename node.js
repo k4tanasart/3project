@@ -28,7 +28,7 @@ function setprices() {
     VatEl.textContent = vatElementSum + "€";
     TotalEl.textContent = (Number(subtotalElementSum) + Number(vatElementSum)).toFixed(2) + "€";
     document.querySelector(".productcheckout__single--price").textContent = ProductSinglePrice + "€";
-    document.querySelector(".Delivery--value").textContent = productDeliveryValue + "€"
+    document.querySelector(".Delivery--value").textContent = productDeliveryValue + "€";
     document.querySelector(".Finishing--value").textContent = productFinishingValue + "€"
 }
 setprices()
