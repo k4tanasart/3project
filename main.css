@@ -154,6 +154,8 @@ header{
     font-size: 20px;
     padding: 20px;
     padding-bottom: 30px;
+    color: #1A2744;
+    font-weight: bold;
 }
 
 .summary-row .value {
