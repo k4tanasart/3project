@@ -195,6 +195,7 @@ header{
     justify-self: center;
     width: 80%;
     background-color: white;
+    color: #1A2744;
 }
 
 .page-header__navigation-tabs-list{
@@ -218,19 +219,38 @@ header{
     border-radius: 10px ;
     background-color: #17316C0F;
     border: none;
-    width: 25%;
+    width: 22%;
     background-image:url(/img/zalupa.png) ;
     background-repeat: no-repeat;
     background-position: 10px center;
     padding-left: 30px;
 }
 
+.page-header__navigation-button{
+    background: none;
+    border: none;
+    transition: 0.4s;
+    padding:10px 15px ; 
+    background: transparent;
+    border-radius: 15px;
+
+}
 
 
+.page-header__navigation-tabs{
+    gap: 20px;
+    display: flex;
+}
 
+.page-header__navigation-tabs-item a{
+    color: #1A2744;
+}
 
-
-
+.button-clicked{
+    background: #17316C;
+    color: white;
+    transition: 0.4s;
+}
 
 
 

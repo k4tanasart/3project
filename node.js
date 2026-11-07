@@ -10,11 +10,16 @@ const deleteIcon = document.querySelector(".productcheckout__delete-icon");
 const wholeProductCard = document.querySelector(".productcheckout__pic--info");
 const productDeliveryValue = document.querySelector(".Delivery--value").textContent;
 const productFinishingValue = document.querySelector(".Finishing--value").textContent;
+const headerButtonProducts = document.querySelector(".button-products");
+const headerButtonGeneral = document.querySelector(".button-general-information");
+const headerButtonFaq = document.querySelector(".button-faq");
 
 
 let ProductsPrice = Number(ProductsEl.textContent);
 
 let ProductQuantity = Number(QuantityEl.value);
+
+
 
 function setprices() {
     QuantityEl.value = ProductQuantity;
@@ -56,5 +61,29 @@ if (deleteIcon){
         wholeProductCard.outerHTML = "";
         ProductQuantity = 0;
         setprices()
+    })
+}
+
+if(headerButtonProducts){
+    headerButtonProducts.addEventListener("click", ()=>{
+        headerButtonProducts.classList.toggle("button-clicked")
+        headerButtonGeneral.classList.remove("button-clicked")
+        headerButtonFaq.classList.remove("button-clicked")
+    })
+}
+
+if(headerButtonGeneral){
+    headerButtonGeneral.addEventListener("click", ()=>{
+        headerButtonGeneral.classList.toggle("button-clicked")
+        headerButtonProducts.classList.remove("button-clicked")
+        headerButtonFaq.classList.remove("button-clicked")
+    })
+}
+
+if(headerButtonFaq){
+    headerButtonFaq.addEventListener("click", ()=>{
+        headerButtonFaq.classList.toggle("button-clicked")
+        headerButtonProducts.classList.remove("button-clicked")
+        headerButtonGeneral.classList.remove("button-clicked")
     })
 }
