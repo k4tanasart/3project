@@ -66,24 +66,30 @@ if (deleteIcon){
 
 if(headerButtonProducts){
     headerButtonProducts.addEventListener("click", ()=>{
-        headerButtonProducts.classList.toggle("button-clicked")
-        headerButtonGeneral.classList.remove("button-clicked")
-        headerButtonFaq.classList.remove("button-clicked")
+        headerButtonProducts.classList.toggle("button-clicked");
+        if(headerButtonGeneral.classList.contains("button-clicked"))
+            headerButtonGeneral.classList.remove("button-clicked")
+        if(headerButtonFaq.classList.contains("button-clicked"))
+            headerButtonFaq.classList.remove("button-clicked")
     })
 }
 
 if(headerButtonGeneral){
     headerButtonGeneral.addEventListener("click", ()=>{
         headerButtonGeneral.classList.toggle("button-clicked")
-        headerButtonProducts.classList.remove("button-clicked")
-        headerButtonFaq.classList.remove("button-clicked")
+        if(headerButtonProducts.classList.contains("button-clicked"))
+            headerButtonProducts.classList.remove("button-clicked")
+        if(headerButtonFaq.classList.contains("button-clicked"))
+            headerButtonFaq.classList.remove("button-clicked")
     })
 }
 
 if(headerButtonFaq){
     headerButtonFaq.addEventListener("click", ()=>{
         headerButtonFaq.classList.toggle("button-clicked")
-        headerButtonProducts.classList.remove("button-clicked")
-        headerButtonGeneral.classList.remove("button-clicked")
+        if(headerButtonProducts.classList.contains("button-clicked"))
+            headerButtonProducts.classList.remove("button-clicked")
+        if(headerButtonGeneral.classList.contains("button-clicked"))
+            headerButtonGeneral.classList.remove("button-clicked")
     })
 }
