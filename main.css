@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -14,9 +15,9 @@ img {
 }
 
 body {
-    font-family: "figtree", sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
-    color: black;
+    color: #1A2744;
     font-size: 16px;
     background: white
 }
@@ -200,7 +201,7 @@ header{
     color: #1A2744;
 }
 
-.page-header__navigation-tabs-list{
+.page-header__navigation-tabs-list, .page-header__navigation-tabs-list ul {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -248,7 +249,7 @@ header{
     color: #1A2744;
 }
 
-.button-clicked{
+.page-header__navigation-button.button-clicked{
     background: #17316C;
     color: white;
     transition: 0.4s;
@@ -286,12 +287,22 @@ header{
     gap: 20px;
     display: flex;
     flex-direction: column;
+    width: 15%;
+}
+
+
+
+.products-megamenu__product-type-list button{
+    border: none;
+    background-color: white;
+    color: #1A2744;
+    font-size: 14px;
 }
 
 .products-megamenu__product-list a {
     display: flex;
     align-items: center; 
-    gap: 15px;           
+    gap: 15px;      
 }
 
 
@@ -301,6 +312,12 @@ header{
 
 .hidden{
     display: none;
+}
+
+.products-megamenu__product-type-button.button-clicked{
+    transition: ease;
+    font-weight: 900;
+    text-decoration: underline;
 }
 
 
