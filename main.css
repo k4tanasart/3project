@@ -255,8 +255,57 @@ header{
 }
 
 
+/* MEGAMENU PRODUCTS */
 
 
+.products-megamenu{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0 ;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 10ms;
+    position: absolute;
+    z-index: 100;
+    background: white;
+}
+
+.products-megamenu__product-list{
+    list-style: none;
+    display: grid;
+    gap: 20px;
+}
+.products-megamenu__product-list a, .products-megamenu__product-type-list a{
+    color: #1A2744;
+}
+
+.products-megamenu__product-type-list{
+    list-style: none;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.products-megamenu__product-list a {
+    display: flex;
+    align-items: center; 
+    gap: 15px;           
+}
+
+
+.products-megamenu__bestseller{
+    align-content: center;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+/* MEGAMENU PRODUCTS */
 
 @media(max-width: 768px){
     .productcheckout{

@@ -13,7 +13,7 @@ const productFinishingValue = document.querySelector(".Finishing--value").textCo
 const headerButtonProducts = document.querySelector(".button-products");
 const headerButtonGeneral = document.querySelector(".button-general-information");
 const headerButtonFaq = document.querySelector(".button-faq");
-
+const productsMegaMenu = document.querySelector(".products-megamenu");
 
 let ProductsPrice = Number(ProductsEl.textContent);
 
@@ -67,6 +67,7 @@ if (deleteIcon){
 if(headerButtonProducts){
     headerButtonProducts.addEventListener("click", ()=>{
         headerButtonProducts.classList.toggle("button-clicked");
+        productsMegaMenu.classList.toggle("hidden");
         if(headerButtonGeneral.classList.contains("button-clicked"))
             headerButtonGeneral.classList.remove("button-clicked")
         if(headerButtonFaq.classList.contains("button-clicked"))
