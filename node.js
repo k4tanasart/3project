@@ -80,7 +80,7 @@ if (deleteIcon){
 // prices, quantity, checkout
 // button header transformation 
 
-if(headerButtonProducts, productsMegaMenu){
+if(headerButtonProducts && productsMegaMenu){
     headerButtonProducts.addEventListener("click", ()=>{
         headerButtonProducts.classList.toggle("button-clicked");
         productsMegaMenu.classList.toggle("hidden");
@@ -88,11 +88,30 @@ if(headerButtonProducts, productsMegaMenu){
             headerButtonGeneral.classList.remove("button-clicked")
         if(headerButtonFaq.classList.contains("button-clicked"))
             headerButtonFaq.classList.remove("button-clicked")
+        
     })
 }
 
+function productsButtonMegamenuClose (){
+    productsMegaMenu.classList.add("hidden");
+    headerButtonProducts.classList.remove("button-clicked")
+}
+
+document.addEventListener("click", (event)=>{
+    if (!productsMegaMenu.contains(event.target) && !headerButtonProducts.contains(event.target) && !productsMegaMenu.classList.contains("hidden") )                  
+        productsButtonMegamenuClose              
+})    
+
+document.addEventListener("keydown", (event)=>{
+    if (event.key === "Escape" && !productsMegaMenu.classList.contains("hidden") )                   
+            productsButtonMegamenuClose           
+})  
+
+
+
+
 if(headerButtonGeneral){
-    headerButtonGeneral.addEventListener("click", ()=>{
+    headerButtonGeneral.addEventListener("click", ()    =>{
         headerButtonGeneral.classList.toggle("button-clicked");
         if(headerButtonProducts.classList.contains("button-clicked"))
             headerButtonProducts.classList.remove("button-clicked");
