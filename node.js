@@ -99,12 +99,12 @@ function productsButtonMegamenuClose (){
 
 document.addEventListener("click", (event)=>{
     if (!productsMegaMenu.contains(event.target) && !headerButtonProducts.contains(event.target) && !productsMegaMenu.classList.contains("hidden") )                  
-        productsButtonMegamenuClose              
+        productsButtonMegamenuClose()              
 })    
 
 document.addEventListener("keydown", (event)=>{
     if (event.key === "Escape" && !productsMegaMenu.classList.contains("hidden") )                   
-            productsButtonMegamenuClose           
+        productsButtonMegamenuClose()           
 })  
 
 
