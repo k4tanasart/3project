@@ -92,19 +92,19 @@ if(headerButtonProducts && productsMegaMenu){
     })
 }
 
-function productsButtonMegamenuClose (){
+function closeButtonMegamenuProducts (){
     productsMegaMenu.classList.add("hidden");
     headerButtonProducts.classList.remove("button-clicked")
 }
 
 document.addEventListener("click", (event)=>{
     if (!productsMegaMenu.contains(event.target) && !headerButtonProducts.contains(event.target) && !productsMegaMenu.classList.contains("hidden") )                  
-        productsButtonMegamenuClose()              
+        closeButtonMegamenuProducts()              
 })    
 
 document.addEventListener("keydown", (event)=>{
     if (event.key === "Escape" && !productsMegaMenu.classList.contains("hidden") )                   
-        productsButtonMegamenuClose()           
+        closeButtonMegamenuProducts()           
 })  
 
 
@@ -120,20 +120,17 @@ if(headerButtonGeneral){
             headerButtonFaq.classList.remove("button-clicked")
     })
 }
-
-if(headerButtonFaq){
-    headerButtonFaq.addEventListener("click", ()=>{
-        headerButtonFaq.classList.toggle("button-clicked");
-        if(headerButtonProducts.classList.contains("button-clicked"))
-            headerButtonProducts.classList.remove("button-clicked")
-            productsMegaMenu.classList.add("hidden")
-        if(headerButtonGeneral.classList.contains("button-clicked"))
-            headerButtonGeneral.classList.remove("button-clicked")
-    })
-}
+document.addEventListener("click", (event)=>{
+    if(!headerButtonGeneral.contains(event.target) && headerButtonGeneral.classList.contains("button-clicked"))
+        headerButtonGeneral.classList.remove("button-clicked")
+})
+document.addEventListener("keydown", (event)=>{
+    if (event.key === "Escape" && headerButtonGeneral.classList.contains("button-clicked"))
+        headerButtonGeneral.classList.remove("button-clicked")
+})
 
 // button header transformation 
-// megamenu
+// inside megamenu buttons 
 
 if(productsMegaMenuClothingButton){
     productsMegaMenuClothingButton.addEventListener("click", ()=>{
@@ -255,4 +252,4 @@ if(productsMegaMenuBoxesButton){
     })
 }
 
-// megamenu
+// inside megamenu buttons

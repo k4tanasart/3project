@@ -222,26 +222,46 @@ header{
     border-radius: 10px ;
     background-color: #17316C0F;
     border: none;
-    width: 22%;
+    width: 17%;
     background-image:url(/img/zalupa.png) ;
     background-repeat: no-repeat;
     background-position: 10px center;
     padding-left: 30px;
+    font-size: 12px;
 }
 
 .page-header__navigation-button{
     background: none;
     border: none;
     transition: 0.4s;
-    padding:10px 15px ; 
+    padding:10px 28px 10px 15px ; 
     background: transparent;
     border-radius: 15px;
+}
 
+.button-faq{
+    padding: 10px 0;
+}
+.button-products, .button-general-information{
+    align-items: center;
+    position: relative;
+}
+.button-products::after, .button-general-information::after{
+    content: url(/img/vniz3.png);
+    top: 10px;
+    position: absolute;
+    padding-left: 4px;
+} 
+.button-products.button-clicked::after, .button-general-information.button-clicked::after{
+    content: url(/img/vverh.png);
+    top: 10px;
+    position: absolute;
+    padding-left: 4px;
 }
 
 
 .page-header__navigation-tabs{
-    gap: 20px;
+    gap: 10px;
     display: flex;
 }
 
