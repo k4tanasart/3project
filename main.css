@@ -196,7 +196,7 @@ header{
     justify-content: space-between;
     flex-direction: row;
     justify-self: center;
-    width: 80%;
+    width: 90%;
     background-color: white;
     color: #1A2744;
 }
@@ -241,6 +241,8 @@ header{
 
 .button-faq{
     padding: 10px 0;
+    text-decoration: none;
+    color: #1A2744;
 }
 .button-products, .button-general-information{
     align-items: center;
@@ -359,5 +361,23 @@ header{
     .productcheckout__produt--summary{
         width: 83%;
         margin: 0 auto;
+    }
+}
+
+@media(min-width:768px) and (max-width: 1173px){
+    .page-header__navigation-tabs-list ul a,.page-header__navigation-button{
+        font-size: 12px;
+    }
+    .page-header__search-tab{
+        width: 5%;
+    }
+    .page-header__search-tab::placeholder{
+        content: " ";
+    }
+    .page-header__navigation-tabs{
+        gap: 0px;
+    }
+    .page-header{
+        width: 98%;
     }
 }
