@@ -28,12 +28,29 @@ const ListMegaMenuButtonMobile = document.querySelector('.button-list--mob');
 const CartMegaMenuButtonMobile = document.querySelector('.button-cart--mob');
 const BurgerMegaMenuMobile = document.querySelector(".burger-megamenu--mob");
 const HeaderLogo = document.querySelector('.page-header__logo');
-const CloseMegaMenuButtonMobile = document.querySelector(".button-close--mob")
-const AllHeaderButtonsMobile = document.querySelectorAll(".page-header-buttons--mob")
+const CloseMegaMenuButtonMobile = document.querySelector(".button-close--mob");
+const AllHeaderButtonsMobile = document.querySelectorAll(".page-header-buttons--mob");
+const MediaQueryPhone = window.matchMedia("(max-width: 768px)");
 
 
 // consts
 
+function ChangeScreenWidth(e) {
+    if (e.matches) {
+        AllHeaderButtonsMobile.forEach(item => {
+            item.classList.remove("hidden")
+        }) 
+    }
+    else
+        AllHeaderButtonsMobile.forEach(item => {
+            item.classList.add("hidden")
+            CloseMegaMenuButtonMobile.classList.add("hidden")
+        })
+}
+ChangeScreenWidth(MediaQueryPhone);
+MediaQueryPhone.addEventListener('change', ChangeScreenWidth);
+
+console.log(AllHeaderButtonsMobile)
 
 let ProductsPrice = Number(ProductsEl.textContent);
 
@@ -264,14 +281,21 @@ if(productsMegaMenuBoxesButton){
 if(BurgerMegaMenuButtonMobile){
     BurgerMegaMenuButtonMobile.addEventListener("click", ()=>{
         BurgerMegaMenuMobile.classList.remove("hidden");
-        SearchMegaMenuButtonMobile.classList.add("hidden");
-        ListMegaMenuButtonMobile.classList.add("hidden");
-        CartMegaMenuButtonMobile.classList.add("hidden");
-        BurgerMegaMenuButtonMobile.classList.add("hidden");
         HeaderLogo.classList.add("logo-left");
         CloseMegaMenuButtonMobile.classList.remove("hidden");
         AllHeaderButtonsMobile.forEach(item => {
             item.classList.add("hidden")
+        })
+    })
+}
+
+if(CloseMegaMenuButtonMobile){
+    CloseMegaMenuButtonMobile.addEventListener("click", ()=>{
+        BurgerMegaMenuMobile.classList.add("hidden");
+        HeaderLogo.classList.remove("logo-left");
+        CloseMegaMenuButtonMobile.classList.add("hidden");
+        AllHeaderButtonsMobile.forEach(item => {
+            item.classList.remove("hidden")
         })
     })
 }
