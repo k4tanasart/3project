@@ -421,9 +421,10 @@ header{
     .productcheckout__pic--info img{
         scale: 80%;
     }
-    .page-header__logo{
+    .page-header__logo img{
         margin: 0 auto;
-        scale: 80%;
+        width: 136px;
+        height: 31px;
     }
     .page-header-buttons--mob{
         width: 20%;
