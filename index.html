@@ -9,18 +9,31 @@
 <body>
     <header>
         <div class="page-header">
+            <div class="page-header-buttons--mob">
+                <button class="page-header__button--mob button-burger--mob"><img src="/img/burger.png" alt=""></button>
+                <button class="page-header__button--mob button-search--mob"><img src="/img/minilupa.png" alt=""></button>
+            </div>
             <a href="" class="page-header__logo" ><img src="/img/logo.png" alt="" class="logo__image"></a>
+            <div class="page-header-buttons--mob">
+                <button class="page-header__button--mob button-list--mob"><img src="/img/minilist.png" alt=""></button>
+                <button class="page-header__button--mob button-cart--mob"><img src="/img/minicart.png" alt=""></button>
+            </div>
+            <button class="page-header__button--mob button-close--mob hidden"><img src="/img/hrestik.png" alt=""></button>
             <nav class="page-header__navigation-tabs">
                 <button class="page-header__navigation-button button-products" >Products </button>
                 <button class="page-header__navigation-button button-general-information"  >General Information</button>
                 <a href="" class="page-header__navigation-button button-faq">FAQ</a>
             </nav>
             <input type="text" class="page-header__search-tab" placeholder="Search for a product or item number…">
+            <input type="text" class="page-header__search-tab--little-screen" placeholder="Search">
             <nav class="page-header__navigation-tabs-list">
                 <ul>
                     <li class="page-header__navigation-tabs-item"> <img src="/img/chelovechek.png" alt=""> <a href="">Account</a></li>
                     <li class="page-header__navigation-tabs-item"><img src="/img/list.png" alt=""> <a href="">List of Offers</a></li>
                     <li class="page-header__navigation-tabs-item"><img src="/img/cart.png" alt=""> <a href="">Shopping Cart</a></li>
+                    <li class="page-header__navigation-tabs-item--mob"><a href=""><img src="/img/chelovechek.png" alt=""></a></li>
+                    <li class="page-header__navigation-tabs-item--mob"><a href=""><img src="/img/list.png" alt=""></a></li>
+                    <li class="page-header__navigation-tabs-item--mob"><a href=""><img src="/img/cart.png" alt=""></a></li>
                 </ul>
             </nav>
         </div>
@@ -50,8 +63,11 @@
             </ul>
             <a href="" class="products-megamenu__bestseller"><img src="/img/megamenu bestseller.png" alt=""></a>
         </div>
+        <div class="burger-megamenu--mob hidden">
+            
+        </div>
         <div class="header-offerpath">
-            <p >Home › List of Offers</p>
+            <span>Home › List of Offers</span>
             <h2>Your Offer</h2>
             <p>It takes up to 24 hours to prepare a quote - to place an order directly, customize the design yourself</p>
         </div>
@@ -73,12 +89,12 @@
                         </div>
                         <div class="productcheckout__size--number">
                             <p>Navy | M</p>
-                            <p>Item No.: 000-000</p>
+                            <p class="productcheckout__item-number">Item No.: 000-000</p>
                         </div>
         
                         <div class="productcheckout__quantity--picker">
                             <button class="minus--quantity">-</button>
-                            <input class="productcheckout__quantity--number" value="1" type="number" >
+                            <input class="productcheckout__quantity--number" value="1" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" >
                             <button class="plus--quantity">+</button>
                         </div>
                         <img class="productcheckout__delete-icon" src="/img/Vector.png" alt="">

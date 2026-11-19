@@ -71,6 +71,13 @@ header{
 .productcheckout__quantity--picker {
     grid-column: 1;
     grid-row: 3;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    border: 1px solid #707070;
+    width: fit-content;
+    padding: 5px 13px;
+    border-radius: 10px;
 }
 
 .productcheckout__delete-icon {
@@ -80,16 +87,12 @@ header{
     align-self: center;
 }
 
-.productcheckout__quantity--picker{
-    display: flex;
-    flex-direction: row;
-    gap: 7px;
-}
 .productcheckout__quantity--number{
     align-self: center;
     text-align: center;
-    width: 5%;
+    width: 22px;
     border: none;
+    
 }
 
 .productcheckout__quantity--number::-webkit-outer-spin-button,
@@ -216,13 +219,16 @@ header{
     align-content: center   ;
     align-self: center;
 }
+.page-header__navigation-tabs-item--mob{
+    display: none;
+}
 
 .page-header__search-tab{
     height: 40px;
     border-radius: 10px ;
     background-color: #17316C0F;
     border: none;
-    width: 17%;
+    width: 25%;
     background-image:url(/img/zalupa.png) ;
     background-repeat: no-repeat;
     background-position: 10px center;
@@ -342,10 +348,44 @@ header{
     text-decoration: underline;
 }
 
+.productcheckout__item-number{
+        font-size: 10px;
+        color: #707070;
+        padding-top: 10px;
+    }
 
+.header-offerpath span{
+    font-size: 12px;
+    color: #707070;
+
+}
 
 /* MEGAMENU PRODUCTS */
 
+.page-header__navigation-tabs-item--mob,
+.page-header__search-tab--little-screen,
+.page-header-buttons--mob{
+    display: none;
+}
+
+@media (min-width:768px) and (max-width:1300px)  {
+    .page-header__search-tab--little-screen{
+        display: block;
+        height: 40px;
+        border-radius: 10px ;
+        background-color: #17316C0F;
+        border: none;
+        width: 15%;
+        background-image:url(/img/zalupa.png) ;
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        padding-left: 30px;
+        font-size: 12px;
+    }
+    .page-header__search-tab{
+        display: none;
+    }
+}
 @media(max-width: 768px){
     .productcheckout{
         display: flex;
@@ -353,24 +393,61 @@ header{
         gap: 20px;
     }
     .productcheckout__product--card{
-        width: 80%;
+        width: 90%;
         padding: 0;
         margin: 0 auto;
 
     }
-    .productcheckout__produt--summary{
-        width: 83%;
+    .productcheckout__produt--summary, .header-offerpath{
+        width: 90%;
         margin: 0 auto;
+    }
+    .page-header__navigation-tabs-item--mob{
+        align-content: center   ;
+        align-self: center;
+        display: block;
+    }
+    .page-header > :not(.page-header__logo, .page-header-buttons--mob, 
+    .page-header__button--mob.button-close--mob){
+        display: none;
+    }
+    .page-header{
+        width: 90%;
+    }
+    .productcheckout__summary--row{
+        font-size: 15px;
+    }
+    .productcheckout__pic--info img{
+        scale: 80%;
+    }
+    .page-header__logo{
+        margin: 0 auto;
+        scale: 80%;
+    }
+    .page-header-buttons--mob{
+        display: block;
+        width: 20%;
+    }
+    .page-header__button--mob{
+        background: none;
+        border: none;
+    }
+    .page-header-buttons--mob{
+        align-content: center;
+        display: flex;
+        flex-direction: row;
+        gap: 50%;
+    }
+    .page-header-buttons--mob:has(.button-list--mob){
+        justify-content: end;
+    }
+    .page-header__logo.logo-left{
+        justify-self: start;
     }
 }
 
 @media(min-width:768px) and (max-width: 1173px){
-    .page-header__navigation-tabs-list ul a,.page-header__navigation-button{
-        font-size: 12px;
-    }
-    .page-header__search-tab{
-        width: 5%;
-    }
+    
     .page-header__search-tab::placeholder{
         content: " ";
     }
@@ -378,6 +455,18 @@ header{
         gap: 0px;
     }
     .page-header{
-        width: 98%;
+        width: 90%;
+    }
+
+    .page-header__navigation-tabs-item{
+        display: none;
+    }
+    .page-header__navigation-tabs-item--mob{
+        align-content: center   ;
+        align-self: center;
+        display: block;
+    }
+    .productcheckout__summary--row{
+        font-size: 15px;
     }
 }

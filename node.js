@@ -22,7 +22,14 @@ const productsMegaMenuStickersButton = document.querySelector('.button-stickers'
 const productsMegaMenuAccessoriesButton = document.querySelector(".button-accessories");
 const productsMegaMenuAppreciationButton = document.querySelector(".button-appreciation");
 const productsMegaMenuBoxesButton = document.querySelector('.button-boxes');
-
+const BurgerMegaMenuButtonMobile = document.querySelector(".button-burger--mob");
+const SearchMegaMenuButtonMobile = document.querySelector('.button-search--mob');
+const ListMegaMenuButtonMobile = document.querySelector('.button-list--mob');
+const CartMegaMenuButtonMobile = document.querySelector('.button-cart--mob');
+const BurgerMegaMenuMobile = document.querySelector(".burger-megamenu--mob");
+const HeaderLogo = document.querySelector('.page-header__logo');
+const CloseMegaMenuButtonMobile = document.querySelector(".button-close--mob")
+const AllHeaderButtonsMobile = document.querySelectorAll(".page-header-buttons--mob")
 
 
 // consts
@@ -253,3 +260,18 @@ if(productsMegaMenuBoxesButton){
 }
 
 // inside megamenu buttons
+
+if(BurgerMegaMenuButtonMobile){
+    BurgerMegaMenuButtonMobile.addEventListener("click", ()=>{
+        BurgerMegaMenuMobile.classList.remove("hidden");
+        SearchMegaMenuButtonMobile.classList.add("hidden");
+        ListMegaMenuButtonMobile.classList.add("hidden");
+        CartMegaMenuButtonMobile.classList.add("hidden");
+        BurgerMegaMenuButtonMobile.classList.add("hidden");
+        HeaderLogo.classList.add("logo-left");
+        CloseMegaMenuButtonMobile.classList.remove("hidden");
+        AllHeaderButtonsMobile.forEach(item => {
+            item.classList.add("hidden")
+        })
+    })
+}
