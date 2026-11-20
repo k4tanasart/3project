@@ -45,6 +45,7 @@ function ChangeScreenWidth(event) {
         AllHeaderButtonsMobile.forEach(item => {
             item.classList.add("hidden")
             CloseMegaMenuButtonMobile.classList.add("hidden")
+            BurgerMegaMenuMobile.classList.add("hidden")
         })
 }
 ChangeScreenWidth(MediaQueryPhone)

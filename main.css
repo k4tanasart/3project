@@ -453,6 +453,7 @@ header{
         z-index: 100;
         left: 50%;
         transform: translateX(-50%);
+        background: white;
     }
     .burger-megamenu__button-list--mob ul{
         list-style: none;
@@ -462,11 +463,25 @@ header{
         
     }
     .burger-megamenu__button-list-item--mob a{
-        color: #1A2744;
-    }
-    .burger-megamenu__button-list-item--mob{
         display: flex;
         flex-direction: column;
+        color: #1A2744;
+        align-items: center;
+        text-align: center;
+    }
+    .burger-megamenu__button-list--mob ul li{
+        background-color: #17316C0F;
+    }
+    .burger-megamenu__button-list-item--mob.button-faq,
+    .burger-megamenu__button-list-item--mob.button-list{
+        width: 35%;
+        padding: 10px 0;
+        border-radius: 10px;
+    }
+    .burger-megamenu__button-list-item--mob.button-profile{
+        width: 23%;
+        padding: 10px 0;
+        border-radius: 10px;
     }
 
 }
