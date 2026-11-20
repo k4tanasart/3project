@@ -13,7 +13,7 @@ const productDeliveryValue = document.querySelector(".Delivery--value").textCont
 const productFinishingValue = document.querySelector(".Finishing--value").textContent;
 const headerButtonProducts = document.querySelector(".button-products");
 const headerButtonGeneral = document.querySelector(".button-general-information");
-const headerButtonFaq = document.querySelector(".button-faq");
+const headerButtonFaq = document.querySelector(".page-header__navigation-button.button-faq");
 const productsMegaMenu = document.querySelector(".products-megamenu");
 const productsMegaMenuClothingButton = document.querySelector(".button-clothing");
 const productsMegaMenuWaterBottlesButton = document.querySelector(".button-water-bottles");
@@ -34,9 +34,9 @@ const MediaQueryPhone = window.matchMedia("(max-width: 768px)");
 
 
 // consts
-
-function ChangeScreenWidth(e) {
-    if (e.matches) {
+function ChangeScreenWidth(event) {
+    console.log(event)
+    if (event.matches) {
         AllHeaderButtonsMobile.forEach(item => {
             item.classList.remove("hidden")
         }) 
@@ -47,7 +47,7 @@ function ChangeScreenWidth(e) {
             CloseMegaMenuButtonMobile.classList.add("hidden")
         })
 }
-ChangeScreenWidth(MediaQueryPhone);
+ChangeScreenWidth(MediaQueryPhone)
 MediaQueryPhone.addEventListener('change', ChangeScreenWidth);
 
 console.log(AllHeaderButtonsMobile)
@@ -115,6 +115,7 @@ if(headerButtonProducts && productsMegaMenu){
         
     })
 }
+
 
 function closeButtonMegamenuProducts (){
     productsMegaMenu.classList.add("hidden");

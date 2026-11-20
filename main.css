@@ -245,7 +245,7 @@ header{
     border-radius: 15px;
 }
 
-.button-faq{
+.page-header__navigation-button.button-faq{
     padding: 10px 0;
     text-decoration: none;
     color: #1A2744;
@@ -448,12 +448,25 @@ header{
         margin: 0;
     }
     .burger-megamenu--mob{
-        padding: 100px;
-        background: black;
+        width: 94%;
         position: absolute;
         z-index: 100;
         left: 50%;
         transform: translateX(-50%);
+    }
+    .burger-megamenu__button-list--mob ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    .burger-megamenu__button-list-item--mob a{
+        color: #1A2744;
+    }
+    .burger-megamenu__button-list-item--mob{
+        display: flex;
+        flex-direction: column;
     }
 
 }
