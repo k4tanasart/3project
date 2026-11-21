@@ -40,12 +40,16 @@ function ChangeScreenWidth(event) {
         AllHeaderButtonsMobile.forEach(item => {
             item.classList.remove("hidden")
         }) 
+        productsMegaMenu.classList.add("hidden")
+        headerButtonProducts.classList.remove("button-clicked")
     }
     else
         AllHeaderButtonsMobile.forEach(item => {
             item.classList.add("hidden")
             CloseMegaMenuButtonMobile.classList.add("hidden")
             BurgerMegaMenuMobile.classList.add("hidden")
+            productsMegaMenu.classList.add("hidden")
+            headerButtonProducts.classList.remove("button-clicked")
         })
 }
 ChangeScreenWidth(MediaQueryPhone)

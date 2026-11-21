@@ -483,7 +483,22 @@ header{
         padding: 10px 0;
         border-radius: 10px;
     }
-
+    .burger-megamenu__bestseller-link--mob img{
+        padding: 10px 0;
+        width: 100%;
+    }
+    .burger-megamenu__product-type-list--mob li span::after{
+        content: url(/img/plus.png);
+        
+    }
+    .burger-megamenu__product-row--mobile{
+        justify-content: space-between;
+        display: flex;
+    }
+    .burger-megamenu__product-type-list--mob{
+        list-style: none;
+    }
+    
 }
 
 @media(min-width:768px) and (max-width: 1173px){
@@ -508,5 +523,14 @@ header{
     }
     .productcheckout__summary--row{
         font-size: 15px;
+    }
+    .products-megamenu__bestseller img{
+        max-width: 200px;
+    }
+    .products-megamenu__product-type-button{
+        text-align: left;
+    }
+    .products-megamenu__product-list a span{
+        font-size: 12px;
     }
 }
