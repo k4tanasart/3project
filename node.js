@@ -31,6 +31,9 @@ const HeaderLogo = document.querySelector('.page-header__logo');
 const CloseMegaMenuButtonMobile = document.querySelector(".button-close--mob");
 const AllHeaderButtonsMobile = document.querySelectorAll(".page-header-buttons--mob");
 const MediaQueryPhone = window.matchMedia("(max-width: 768px)");
+const BurgerMegaMenuClothingButton = document.querySelector(".burger-megamenu__product-row--mobile.row-clothing")
+const BurgerMegaMenuClothingMenu = document.querySelector(".burger-megamenu__clothing-menu--mob")
+const BurgerMegaMenuClothingRow = document.querySelector(".burger-megamenu__product-row--mobile.row-clothing")
 
 
 // consts
@@ -88,6 +91,8 @@ QuantityEl.addEventListener("input", ()=>{
 
 QuantityPlus.addEventListener("click", function() {
     ProductQuantity += 1;
+    if(ProductQuantity > 99 )
+        ProductQuantity = 99;
     setprices()
 })
 
@@ -303,5 +308,12 @@ if(CloseMegaMenuButtonMobile){
         AllHeaderButtonsMobile.forEach(item => {
             item.classList.remove("hidden")
         })
+    })
+}
+
+if(BurgerMegaMenuClothingButton){
+    BurgerMegaMenuClothingButton.addEventListener("click", ()=>{
+        BurgerMegaMenuClothingMenu.classList.toggle("hidden")
+        BurgerMegaMenuClothingRow.classList.toggle("row-opened")
     })
 }

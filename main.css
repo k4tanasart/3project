@@ -487,7 +487,7 @@ header{
         padding: 10px 0;
         width: 100%;
     }
-    .burger-megamenu__product-type-list--mob li span::after{
+    .burger-megamenu__product-row--mobile span::after{
         content: url(/img/plus.png);
         
     }
@@ -498,7 +498,50 @@ header{
     .burger-megamenu__product-type-list--mob{
         list-style: none;
     }
+    .burger-megamenu__product-type-button--mob{
+        background: none;
+        border: none;
+    }
+    .burger-megamenu__product-row--mobile{
+        background: #17316C0F;
+        margin: 5px 0;
+        padding: 15px 10px;
+        border-radius: 15px;
+
+    }
+    .burger-megamenu__product-type-list--mob li{
+        display: flex;
+        flex-direction: column;
+    }
+    .burger-megamenu__clothing-menu-product-list--mob{
+        background-color: #17316C0F;
+        border-radius: 15px;
+    }
+    .burger-megamenu__clothing-menu-product-list--mob{
+        display: flex;
+        flex-direction: column;
+    }
+    .burger-megamenu__clothing-menu-product-list--mob li a{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 5px 5px;
+        margin: 0 20px;
+        background-color: white;
+        border-radius: 15px;
+        color: #1A2744;
     
+    }
+    .burger-megamenu__clothing-menu-product-list--mob li{
+        padding: 10px 0;
+    }
+
+    .burger-megamenu__product-row--mobile.row-clothing.row-opened span::after{
+        content:url(/img/minus.png);
+        position: relative;
+        bottom: 4px;
+    }
+
 }
 
 @media(min-width:768px) and (max-width: 1173px){
