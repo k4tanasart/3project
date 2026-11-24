@@ -495,11 +495,11 @@ header{
         padding: 10px 0;
         width: 100%;
     }
-    .burger-megamenu__product-row--mobile span::after{
+    .burger-megamenu__product-row--mob span::after{
         content: url(/img/plus.png);
         
     }
-    .burger-megamenu__product-row--mobile{
+    .burger-megamenu__product-row--mob{
         justify-content: space-between;
         display: flex;
     }
@@ -510,7 +510,7 @@ header{
         background: none;
         border: none;
     }
-    .burger-megamenu__product-row--mobile{
+    .burger-megamenu__product-row--mob{
         background: #17316C0F;
         margin: 5px 0;
         padding: 15px 10px;
@@ -544,7 +544,7 @@ header{
         padding: 10px 0;
     }
 
-    .burger-megamenu__product-row--mobile.row-clothing.row-opened span::after{
+    .burger-megamenu__product-row--mob.row-clothing.row-opened span::after{
         content:url(/img/minus.png);
         position: relative;
         bottom: 4px;
