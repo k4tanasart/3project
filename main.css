@@ -204,7 +204,8 @@ header{
     color: #1A2744;
 }
 
-.page-header__navigation-tabs-list, .page-header__navigation-tabs-list ul {
+.page-header__navigation-tabs-list, .page-header__navigation-tabs-list ul,
+.page-header__navigation-tabs-list--mob, .page-header__navigation-tabs-list--mob ul{
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -240,15 +241,19 @@ header{
     background: none;
     border: none;
     transition: 0.4s;
-    padding:10px 28px 10px 15px ; 
+    padding:12px 28px 12px 15px ; 
     background: transparent;
     border-radius: 15px;
 }
 
 .page-header__navigation-button.button-faq{
-    padding: 10px 0;
+    padding: 0;
     text-decoration: none;
     color: #1A2744;
+}
+.page-header__navigation-tabs ul li:has(a){
+    align-items: center;
+    display: flex;
 }
 .button-products, .button-general-information{
     align-items: center;
@@ -268,9 +273,11 @@ header{
 }
 
 
-.page-header__navigation-tabs{
+.page-header__navigation-tabs ul:has(.page-header__navigation-button){
+    list-style: none;
     gap: 10px;
     display: flex;
+    flex-direction: row;
 }
 
 .page-header__navigation-tabs-item a{
@@ -299,6 +306,7 @@ header{
     position: absolute;
     z-index: 100;
     background: white;
+    top: 80px;
 }
 
 .products-megamenu__product-list{
@@ -374,7 +382,7 @@ header{
         border-radius: 10px ;
         background-color: #17316C0F;
         border: none;
-        width: 15%;
+        width: 14%;
         background-image:url(/img/zalupa.png) ;
         background-repeat: no-repeat;
         background-position: 10px center;
